@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;400;700&display=swap');
+:root {
+    --primary: #6b58ff;
+    --accents: #01fdfe;
+    --white: #fff;
+    --black: #000;
+    --fontSize: 16px;
+    --fontFamily: 'Source Sans Pro', sans-serif;
+    --textShadow: 0 0 2px var(--black);
+    --transition: .3s ease;
+}
+/**************
+basic styles
+**************/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-size: var(--fontSize);
+    font-family: var(--fontFamily);
+    line-height: 1.5;
+}
+.container {
+    max-width: 1140px;
+    margin: auto;
+}
+/**************
+header
+**************/
+header {
+    background-image: url(img/header.jpg);
+    height: 70vh;
+    background-position: bottom;
+    background-size: cover;
+    position: relative;
+}
+h1 {
+    color: var(--white);
+    font-size: 8rem;
+    position: absolute;
+    top: 22%;
+    left: 20%;
+}
+/**************
+footer
+**************/
+footer {
+    background-image: url(img/footer.jpg);
+    background-position: top;
+    background-size: cover;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+footer p {
+    color: var(--white);
+    font-size: 1.3rem;
+    text-shadow: var(--textShadow);
+}
+/**************
+tabovi
+**************/
+.tabovi {
+    padding: 100px 0;
+}
+.linkovi {
+    text-align: center;
+}
+.linkovi a {
+    color: var(--primary);
+    font-size: 2rem;
+    margin: 0 10px;
+    border-bottom: 2px solid var(--primary);
+    text-decoration: none;
+    width: 300px;
+    display: inline-block;
+    cursor: pointer;
+}
+.linkovi a:hover {
+    color: var(--accents);
+    text-shadow: var(--textShadow);
+    transition: var(--transition);
+    border-bottom: 2px solid var(--accents);
+}
+.prikazi {
+    display: flex;
+    justify-content: space-between;
+}
+.prikazi .col-2 {
+    flex: 0 0 68%;
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.prikazi .col-1 {
+    flex: 0 0 28%;
+    margin-top: 50px;
+}
+.prikazi .col-1 img {
+    width: 100%;
+}
+.prikazi h2 {
+    font-size: 3rem;
+    color:var(--primary);
+}
+.prikazi hr {
+    margin: 20px 0 30px 0;
+    height: 2px;
+    border: none;
+    background: linear-gradient(to left, var(--primary), var(--accents));
+}
+.prikazi button {
+    padding: 15px 40px;
+    background: linear-gradient(45deg, var(--primary), var(--accents));
+    border: none;
+    font-size: 1rem;
+    color: var(--white);
+    text-transform: uppercase;
+    margin-top: 30px;
+    text-shadow: var(--textShadow);
+    cursor: pointer;
+    transition: var(--transition);
+}
+.prikazi button:hover {
+    background: linear-gradient(245deg, var(--primary), var(--accents));
+}
+#phpView, #phpViewImg, #wpView, #wpViewImg {
+    display: none;
+}
